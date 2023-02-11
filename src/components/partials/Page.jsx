@@ -4,8 +4,6 @@ import styled from "styled-components";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
-import Contacts from "./Contacts";
-
 
 export const Container = styled.div`
   display: flex;
@@ -16,49 +14,63 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   
-  @media screen and (min-width: 1024px) {
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    width: 80%;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    width: 80%;
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
     width: 50%;
   }
 
-  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  @media only screen and (min-width: 992px) and (orientation: landscape) {
     width: 80%;
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    width: 80%;
-
-    h3 {
-      font-size: 16px;
-    }
-
-    .item {
-      font-size: 12px;
-    }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    width: 50%;
   }
 `;
 
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
+  
+  & > * {
+    padding: 0 10px;
+  }
 `;
 
 const LeftColumn = styled.div`
-  flex: 4;
-  margin-right: 30px;
+  flex: 3;
+  flex-basis: available;
 `;
 
 const RightColumn = styled.div`
-  flex: 1;
   border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 1px 0 5px 4px rgba(221, 215, 211, .8);
-  padding: 0 5px;
+  flex: 1;
 `;
 
 const Title = styled.div`
   font-size: 18px;
   margin: 0 auto;
   text-align: center;
+`;
+
+const About = styled.p`
+  font-style: italic;
 `;
 
 const Name = styled.div`
@@ -68,7 +80,6 @@ const Name = styled.div`
 
 const Position = styled.div`
   font-size: 20px;
-  font-style: italic;
 `;
 
 const Links = styled.div`
@@ -77,12 +88,7 @@ const Links = styled.div`
   font-weight: bold;
   font-size: 16px;
   margin-top: 4px;
-
-  @media print {
-    text-decoration: none;
-    color: black;
-    display: none;
-  }
+  justify-content: center;
 `;
 
 const Link = styled.a`
@@ -92,6 +98,15 @@ const Link = styled.a`
   &:hover {
     cursor: pointer;
     text-decoration: none;
+  }
+
+  @media print {
+    text-decoration: none;
+    color: #537FE7;
+    
+    &:not(.show) {
+      display: none;
+    }
   }
   
   &:not(:last-child) {
@@ -114,28 +129,33 @@ const Page = () => {
                         <Name>Sergey Ivanenko</Name>
                         <Position>Senior React Engineer</Position>
                         <Links>
+                            <Link href="mailto:sergio.ivanuzzo@gmail.com" className="show">
+                                sergio.ivanuzzo@gmail.com
+                            </Link>
                             <Link target="_blank" href="https://www.linkedin.com/in/sergio-ivanuzzo/">LinkedIn</Link>
                             <Link target="_blank" href="https://github.com/sergio-ivanuzzo">GitHub</Link>
                             <Link target="_blank" href="https://stackoverflow.com/users/5397119/sergio-ivanuzzo">
                                 StackOverflow
                             </Link>
+                            <Link target="_blank" href="https://wa.me/66829784530" className="show">
+                                +66 82 978 4530
+                            </Link>
                         </Links>
                     </Title>
                 </Row>
                 <Row>
-                    <p>
+                    <About>
                         I like automation, implementing bots and implementing game servers.
                         Also I like to implement clear, user-friendly and intuitively understandable UI.
                         I have strong experience implementing both backend and frontend from scratch and have strong knowledge
                         on all stages of development lifecycle (architecture design, development itself, testing and deployment).
-                    </p>
+                    </About>
                 </Row>
                 <Row>
                     <LeftColumn>
                         <WorkExperience />
                     </LeftColumn>
                     <RightColumn>
-                        <Contacts />
                         <Skills />
                         <Education />
                     </RightColumn>

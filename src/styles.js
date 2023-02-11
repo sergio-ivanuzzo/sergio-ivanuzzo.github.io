@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Roboto', sans-serif;
+  body {
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
   }
 

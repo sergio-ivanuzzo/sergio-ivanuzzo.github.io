@@ -8,6 +8,7 @@ const Heading = styled.div``;
 const Cell = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     &:last-child {
@@ -18,6 +19,7 @@ const Cell = styled.div`
 
 const OrganizationName = styled.div`
   font-weight: bold;
+  font-style: italic;
 `;
 
 const Location = styled.div`
@@ -28,6 +30,8 @@ const Speciality = styled.div``;
 
 const Degree = styled.span`
   white-space: nowrap;
+  font-style: italic;
+  font-weight: bold;
 `;
 
 const Education = () => {
