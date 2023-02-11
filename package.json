@@ -5,6 +5,7 @@
   "author": "Sergio Ivanuzzo",
   "private": true,
   "dependencies": {
+    "@next/font": "^13.1.6",
     "next": "^13.1.6",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",

@@ -7,12 +7,3 @@ export const Section = styled.section`
     text-transform: uppercase;
   }
 `;
-
-export const Caption = styled.div`
-  display: flex;
-  justify-content: space-between;
-  
-  .bold {
-    font-weight: bold;
-  }
-`;

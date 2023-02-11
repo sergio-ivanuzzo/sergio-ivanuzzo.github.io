@@ -1,6 +1,36 @@
 import React from "react";
+import styled from "styled-components";
 
-import {Caption, Section} from "../../core/Layout";
+import {Section} from "../../core/Layout";
+
+const Heading = styled.div``;
+
+const Cell = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Position = styled.div`
+  font-weight: bold;
+`;
+
+const JobType = styled.span`
+  font-weight: bold;
+  
+  &:after {
+    content: "\\25B8";
+  }
+`;
+
+const Location = styled.span``;
+
+const ExtraInfo = styled.div``;
+
+const TimePeriod = styled.div``;
+
+const CompanyName = styled.div`
+  font-weight: bold;
+`;
 
 const WorkExperience = () => {
     return (
@@ -8,14 +38,19 @@ const WorkExperience = () => {
             <h3>Work Experience</h3>
             <div className="content">
                 <div className="item">
-                    <Caption>
-                        <div className="bold">React Engineer</div>
-                        <div><span className="bold">Full Time</span> &#9656; Bangkok, Thailand</div>
-                    </Caption>
-                    <Caption>
-                        <div className="bold">Amity</div>
-                        <div>September 2020 - Present</div>
-                    </Caption>
+                    <Heading>
+                        <Cell>
+                            <Position>React Engineer</Position>
+                            <ExtraInfo>
+                                <JobType>Full Time</JobType>
+                                <Location>Bangkok, Thailand</Location>
+                            </ExtraInfo>
+                        </Cell>
+                        <Cell>
+                            <CompanyName>Amity</CompanyName>
+                            <TimePeriod>September 2020 - Present</TimePeriod>
+                        </Cell>
+                    </Heading>
                     <div className="body">
                         <ul>
                             <li>
@@ -34,14 +69,19 @@ const WorkExperience = () => {
                 </div>
 
                 <div className="item">
-                    <Caption>
-                        <div className="bold">React Engineer</div>
-                        <div><span className="bold">Freelance</span> &#9656; Kharkov, Ukraine</div>
-                    </Caption>
-                    <Caption>
-                        <div className="bold">VoxUkraine</div>
-                        <div>April 2021 - June 2021</div>
-                    </Caption>
+                    <Heading>
+                        <Cell>
+                            <Position>React Engineer</Position>
+                            <ExtraInfo>
+                                <JobType>Freelance</JobType>
+                                <Location>Kharkov, Ukraine</Location>
+                            </ExtraInfo>
+                        </Cell>
+                        <Cell>
+                            <CompanyName>VoxUkraine</CompanyName>
+                            <TimePeriod>April 2021 - June 2021</TimePeriod>
+                        </Cell>
+                    </Heading>
                     <div className="body">
                         <ul>
                             <li>
@@ -59,14 +99,19 @@ const WorkExperience = () => {
                 </div>
 
                 <div className="item">
-                    <Caption>
-                        <div className="bold">Python Engineer</div>
-                        <div><span className="bold">Full Time</span> &#9656; Kharkov, Ukraine</div>
-                    </Caption>
-                    <Caption>
-                        <div className="bold">Agile Engine</div>
-                        <div>December 2019 - July 2020</div>
-                    </Caption>
+                    <Heading>
+                        <Cell>
+                            <Position>Python Engineer</Position>
+                            <ExtraInfo>
+                                <JobType>Full Time</JobType>
+                                <Location>Kharkov, Ukraine</Location>
+                            </ExtraInfo>
+                        </Cell>
+                        <Cell>
+                            <CompanyName>Agile Engine</CompanyName>
+                            <TimePeriod>December 2019 - July 2020</TimePeriod>
+                        </Cell>
+                    </Heading>
                     <div className="body">
                         <ul>
                             <li>
@@ -80,14 +125,19 @@ const WorkExperience = () => {
                 </div>
 
                 <div className="item">
-                    <Caption>
-                        <div className="bold">React Engineer</div>
-                        <div><span className="bold">Full Time</span> &#9656; Kharkov, Ukraine</div>
-                    </Caption>
-                    <Caption>
-                        <div className="bold">DDI Development</div>
-                        <div>March 2019 - October 2019</div>
-                    </Caption>
+                    <Heading>
+                        <Cell>
+                            <Position>React Engineer</Position>
+                            <ExtraInfo>
+                                <JobType>Full Time</JobType>
+                                <Location>Kharkov, Ukraine</Location>
+                            </ExtraInfo>
+                        </Cell>
+                        <Cell>
+                            <CompanyName>DDI Development</CompanyName>
+                            <TimePeriod>March 2019 - October 2019</TimePeriod>
+                        </Cell>
+                    </Heading>
                     <div className="body">
                         <ul>
                             <li>
@@ -102,14 +152,19 @@ const WorkExperience = () => {
                 </div>
 
                 <div className="item">
-                    <Caption>
-                        <div className="bold">AngularJS Engineer</div>
-                        <div><span className="bold">Full Time</span> &#9656; Kharkov, Ukraine</div>
-                    </Caption>
-                    <Caption>
-                        <div className="bold">Devart</div>
-                        <div>February 2017 - November 2018</div>
-                    </Caption>
+                    <Heading>
+                        <Cell>
+                            <Position>AngularJS Engineer</Position>
+                            <ExtraInfo>
+                                <JobType>Full Time</JobType>
+                                <Location>Kharkov, Ukraine</Location>
+                            </ExtraInfo>
+                        </Cell>
+                        <Cell>
+                            <CompanyName>Devart</CompanyName>
+                            <TimePeriod>February 2017 - November 2018</TimePeriod>
+                        </Cell>
+                    </Heading>
                     <div className="body">
                         <ul>
                             <li>
@@ -126,14 +181,19 @@ const WorkExperience = () => {
                 </div>
 
                 <div className="item">
-                    <Caption>
-                        <div className="bold">JavaScript Mentor</div>
-                        <div><span className="bold">Part Time</span> &#9656; Kharkov, Ukraine</div>
-                    </Caption>
-                    <Caption>
-                        <div className="bold">Spalah (It-School)</div>
-                        <div>April 2016 - September 2017</div>
-                    </Caption>
+                    <Heading>
+                        <Cell>
+                            <Position>JavaScript Mentor</Position>
+                            <ExtraInfo>
+                                <JobType>Part Time</JobType>
+                                <Location>Kharkov, Ukraine</Location>
+                            </ExtraInfo>
+                        </Cell>
+                        <Cell>
+                            <CompanyName>Spalah It-School</CompanyName>
+                            <TimePeriod>April 2016 - September 2017</TimePeriod>
+                        </Cell>
+                    </Heading>
                     <div className="body">
                         <ul>
                             <li>
