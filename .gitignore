@@ -19,6 +19,7 @@
 .env.production.local
 .idea
 .next
+/static
 
 npm-debug.log*
 yarn-debug.log*
