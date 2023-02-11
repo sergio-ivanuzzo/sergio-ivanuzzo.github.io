@@ -4,6 +4,11 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
+
+    @media print {
+      @page { margin: 0; }
+      body { margin: 1.6cm; }
+    }
   }
 
   ul {
