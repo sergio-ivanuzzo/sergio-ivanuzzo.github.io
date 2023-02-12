@@ -6,8 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 14px;
 
     @media print {
-      @page { margin: 0; }
-      body { margin: 1.6cm; }
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+      
+      padding: 0 .5cm;
     }
   }
 

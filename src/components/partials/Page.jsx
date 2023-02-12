@@ -124,10 +124,6 @@ const Link = styled.a`
     cursor: pointer;
     text-decoration: none;
   }
-
-  @media print {
-    text-decoration: none;
-  }
   
   &:not(:last-child) {
     margin-right: 10px;

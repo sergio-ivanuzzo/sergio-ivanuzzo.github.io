@@ -20,6 +20,7 @@ const Cell = styled.div`
 const OrganizationName = styled.div`
   font-weight: bold;
   font-style: italic;
+  white-space: nowrap;
 `;
 
 const Location = styled.div`
