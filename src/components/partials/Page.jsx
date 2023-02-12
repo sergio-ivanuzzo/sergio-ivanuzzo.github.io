@@ -21,12 +21,12 @@ const Content = styled.div`
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    width: 80%;
+    width: 100%;
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    width: 80%;
+    width: 100%;
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -35,7 +35,7 @@ const Content = styled.div`
   }
 
   @media only screen and (min-width: 992px) and (orientation: landscape) {
-    width: 80%;
+    width: 100%;
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -55,7 +55,32 @@ const Row = styled.div`
 
 const LeftColumn = styled.div`
   flex: 3;
-  flex-basis: available;
+
+  flex-basis: min-content;
+
+  @media only screen and (max-width: 600px) {
+    flex-basis: max-content;
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    flex-basis: max-content;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    flex-basis: max-content;
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    flex-basis: min-content;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    flex-basis: min-content;
+  }
 `;
 
 const RightColumn = styled.div`
@@ -102,11 +127,6 @@ const Link = styled.a`
 
   @media print {
     text-decoration: none;
-    color: #537FE7;
-    
-    &:not(.show) {
-      display: none;
-    }
   }
   
   &:not(:last-child) {
@@ -129,7 +149,7 @@ const Page = () => {
                         <Name>Sergey Ivanenko</Name>
                         <Position>Senior React Engineer</Position>
                         <Links>
-                            <Link href="mailto:sergio.ivanuzzo@gmail.com" className="show">
+                            <Link href="mailto:sergio.ivanuzzo@gmail.com">
                                 sergio.ivanuzzo@gmail.com
                             </Link>
                             <Link target="_blank" href="https://www.linkedin.com/in/sergio-ivanuzzo/">LinkedIn</Link>
@@ -137,7 +157,7 @@ const Page = () => {
                             <Link target="_blank" href="https://stackoverflow.com/users/5397119/sergio-ivanuzzo">
                                 StackOverflow
                             </Link>
-                            <Link target="_blank" href="https://wa.me/66829784530" className="show">
+                            <Link target="_blank" href="https://wa.me/66829784530">
                                 +66 82 978 4530
                             </Link>
                         </Links>

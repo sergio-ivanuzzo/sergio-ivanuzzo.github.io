@@ -14,9 +14,24 @@ export const Section = styled.section`
 
     padding: 5px;
 
-    @media screen and (orientation:landscape) {
-      border-top-right-radius: 10px;
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      border-top-right-radius: 0;
     }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      border-top-right-radius: 0;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      border-top-right-radius: 0;
+    }
+
+    //@media screen and (orientation:landscape) {
+    //  border-top-right-radius: 10px;
+    //}
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
