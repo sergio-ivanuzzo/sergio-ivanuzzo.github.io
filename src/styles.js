@@ -2,8 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
+    margin: 5px;
 
     @media print {
       @page {
@@ -11,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
       }
       
-      padding: 0 .5cm;
+      padding: .2cm .5cm;
     }
   }
 

@@ -3,6 +3,15 @@ import styled from "styled-components";
 
 import {Section} from "../../core/Layout";
 
+const StyledSection = styled(Section)`
+  h3 {
+    background: #FBE8D3;
+    box-shadow: 2px 2px 3px 1px silver;
+    //border-bottom: 1px solid silver;
+    //color: white;
+  }
+`;
+
 const Heading = styled.div``;
 
 const Cell = styled.div`
@@ -34,7 +43,7 @@ const CompanyName = styled.div`
 
 const WorkExperience = () => {
     return (
-        <Section>
+        <StyledSection>
             <h3>Work Experience</h3>
             <div className="content">
                 <div className="item">
@@ -59,7 +68,7 @@ const WorkExperience = () => {
                             </li>
                             <li>
                                 owned and successfully implemented UI components
-                                using React.js (Hooks) for that features
+                                using React.js with hooks for that features
                             </li>
                             <li>
                                 implemented manual tests using Storybook and added tests coverage using jest
@@ -86,7 +95,7 @@ const WorkExperience = () => {
                         <ul>
                             <li>
                                 implemented from scratch data visualization tool for data analysts
-                                using React.js (Hooks) and TypeScript
+                                using React.js with hooks and TypeScript
                             </li>
                             <li>
                                 implemented charts components using d3.js
@@ -198,7 +207,7 @@ const WorkExperience = () => {
                         <ul>
                             <li>
                                 released 6 groups of students with basic
-                                knowledge of JavaScript/React/Node.js/AngularJS
+                                knowledge of JavaScript, React, Node.js, AngularJS
                             </li>
                             <li>
                                 was working on reviewing home tasks
@@ -207,7 +216,7 @@ const WorkExperience = () => {
                     </div>
                 </div>
             </div>
-        </Section>
+        </StyledSection>
     );
 };
 

@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Section = styled.section`
   h3 {
     width: calc(100% - 10px);
-    border-bottom: 1px solid silver;
     text-transform: uppercase;
-    background: rgba(221, 211, 221, .8);
+    background: #EFF8FF;
+    box-shadow: 2px 2px 3px 1px silver;
 
     @media print {
       -webkit-print-color-adjust: exact;

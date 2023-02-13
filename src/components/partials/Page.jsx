@@ -4,6 +4,7 @@ import styled from "styled-components";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
+import Contacts from "./Contacts";
 
 export const Container = styled.div`
   display: flex;
@@ -90,50 +91,37 @@ const RightColumn = styled.div`
 
 const Title = styled.div`
   font-size: 18px;
-  margin: 0 auto;
-  text-align: center;
+  //margin: 0 auto;
+  //text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 const About = styled.p`
   font-style: italic;
 `;
 
-const Name = styled.div`
+const FullName = styled.div`
+  display: flex;
+  font-size: 35px;
+  
+  & > * {
+    margin-right: 8px;
+  }
+`;
+
+const Name = styled.span`
   font-weight: bold;
-  font-size: 25px;
+  text-transform: uppercase;
+`;
+
+const Surname = styled.span`
+  text-transform: uppercase;
 `;
 
 const Position = styled.div`
-  font-size: 20px;
-`;
-
-const Links = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 4px;
-  justify-content: center;
-`;
-
-const Link = styled.a`
-  color: #537FE7;
-  text-decoration: underline;
-  
-  &:hover {
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  &:not(:last-child) {
-    margin-right: 10px;
-    
-    &:after {
-      content: "|";
-      margin-left: 10px;
-      color: black;
-    }
-  }
+  font-size: 25px;
 `;
 
 const Page = () => {
@@ -142,21 +130,14 @@ const Page = () => {
             <Content>
                 <Row>
                     <Title>
-                        <Name>Sergey Ivanenko</Name>
-                        <Position>Senior React Engineer</Position>
-                        <Links>
-                            <Link href="mailto:sergio.ivanuzzo@gmail.com">
-                                sergio.ivanuzzo@gmail.com
-                            </Link>
-                            <Link target="_blank" href="https://www.linkedin.com/in/sergio-ivanuzzo/">LinkedIn</Link>
-                            <Link target="_blank" href="https://github.com/sergio-ivanuzzo">GitHub</Link>
-                            <Link target="_blank" href="https://stackoverflow.com/users/5397119/sergio-ivanuzzo">
-                                StackOverflow
-                            </Link>
-                            <Link target="_blank" href="https://wa.me/66829784530">
-                                +66 82 978 4530
-                            </Link>
-                        </Links>
+                        <LeftColumn>
+                            <FullName>
+                                <Name>Sergey</Name>
+                                <Surname>Ivanenko</Surname>
+                            </FullName>
+                            <Position>Senior React Engineer</Position>
+                        </LeftColumn>
+                        <Contacts />
                     </Title>
                 </Row>
                 <Row>
