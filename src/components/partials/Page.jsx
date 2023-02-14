@@ -109,6 +109,7 @@ const About = styled.p`
 const FullName = styled.div`
   display: flex;
   font-size: 35px;
+  flex-wrap: wrap;
   
   & > * {
     margin-right: 8px;
