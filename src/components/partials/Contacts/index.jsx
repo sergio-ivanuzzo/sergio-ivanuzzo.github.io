@@ -6,12 +6,38 @@ import Email from "../../icons/Email";
 import GitHub from "../../icons/GitHub";
 import LinkedIn from "../../icons/LinkedIn";
 import WhatsApp from "../../icons/WhatsApp";
-import StackOverflow from "../../icons/StackOverflow";
+
+const StyledSection = styled(Section)`
+  @media only screen and (max-width: 600px), only screen and (min-width: 600px) {
+    width: 100%;
+  }
+
+  @media
+  only screen and (min-width: 768px),
+  only screen and (min-width: 992px),
+  only screen and (min-width: 1200px) {
+    width: auto;
+  }
+`;
 
 const List = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 18px;
+
+  @media 
+  only screen and (max-width: 600px), 
+  only screen and (min-width: 600px), 
+  only screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media
+  only screen and (min-width: 992px), 
+  only screen and (min-width: 1200px) {
+    flex-direction: column;
+  }
   
   > * {
     margin: 2px 0;
@@ -21,7 +47,39 @@ const List = styled.div`
 const Item = styled.div`
   display: flex;
   justify-content: flex-end;
-  text-align: right;
+  align-items: center;
+
+  > :last-child {
+    width: 18px;
+  }
+
+  @media 
+  only screen and (max-width: 600px), 
+  only screen and (min-width: 600px), 
+  only screen and (min-width: 768px) {
+    flex-direction: row-reverse;
+    > :first-child {
+      display: none;
+    }
+    
+    > :last-child {
+      width: 40px;
+    }
+  }
+
+  @media 
+  only screen and (min-width: 992px), 
+  only screen and (min-width: 1200px) {
+    flex-direction: row;
+    
+    > :first-child {
+      display: inline;
+    }
+
+    > :last-child {
+      width: 18px;
+    }
+  }
 
   & > * {
     margin-right: 8px;
@@ -34,43 +92,40 @@ const Link = styled.a`
   
   &:hover {
     cursor: pointer;
+    text-decoration: underline;
   }
 `;
 
 const Contacts = () => {
     return (
-        <Section>
+        <StyledSection>
             <List>
-                <Item>
-                    <Link href="mailto:sergio.ivanuzzo@gmail.com">
-                        sergio.ivanuzzo@gmail.com
-                    </Link>
-                    <Email width={18} />
-                </Item>
-                <Item>
-                    <Link target="_blank" href="https://www.linkedin.com/in/sergio-ivanuzzo/">
-                        in.com/sergio-ivanuzzo
-                    </Link>
-                    <LinkedIn width={18} />
-                </Item>
-                <Item>
-                    <Link target="_blank" href="https://github.com/sergio-ivanuzzo">github.com/sergio-ivanuzzo</Link>
-                    <GitHub width={18} />
-                </Item>
-                <Item>
-                    <Link target="_blank" href="https://stackoverflow.com/users/5397119/sergio-ivanuzzo">
-                        stackoverflow.com/sergio-ivanuzzo
-                    </Link>
-                    <StackOverflow width={18} />
-                </Item>
-                <Item>
-                    <Link target="_blank" href="https://wa.me/66829784530">
-                        +66 82 978 4530
-                    </Link>
-                    <WhatsApp width={18} />
-                </Item>
+                <Link href="mailto:sergio.ivanuzzo@gmail.com">
+                    <Item>
+                        <span>sergio.ivanuzzo@gmail.com</span>
+                        <Email />
+                    </Item>
+                </Link>
+                <Link target="_blank" href="https://wa.me/66829784530">
+                    <Item>
+                        <span>+66 82 978 4530</span>
+                        <WhatsApp />
+                    </Item>
+                </Link>
+                <Link target="_blank" href="https://www.linkedin.com/in/sergio-ivanuzzo/">
+                    <Item>
+                        <span>sergio-ivanuzzo</span>
+                        <LinkedIn />
+                    </Item>
+                </Link>
+                <Link target="_blank" href="https://github.com/sergio-ivanuzzo">
+                    <Item>
+                        <span>sergio-ivanuzzo</span>
+                        <GitHub />
+                    </Item>
+                </Link>
             </List>
-        </Section>
+        </StyledSection>
     );
 };
 

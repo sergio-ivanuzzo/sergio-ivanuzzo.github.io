@@ -87,14 +87,18 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   border-top-right-radius: 10px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-bottom: 20px;
+  }
 `;
 
 const Title = styled.div`
   font-size: 18px;
-  //margin: 0 auto;
-  //text-align: center;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 `;
 
@@ -142,10 +146,9 @@ const Page = () => {
                 </Row>
                 <Row>
                     <About>
+                        I have strong experience implementing both backend and frontend from scratch.
                         I like automation, implementing bots and implementing game servers.
                         Also I like to implement clear, user-friendly and intuitively understandable UI.
-                        I have strong experience implementing both backend and frontend from scratch and have strong knowledge
-                        on all stages of development lifecycle (architecture design, development itself, testing and deployment).
                     </About>
                 </Row>
                 <Row>

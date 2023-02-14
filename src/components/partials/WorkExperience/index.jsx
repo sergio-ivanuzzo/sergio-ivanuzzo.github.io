@@ -7,8 +7,6 @@ const StyledSection = styled(Section)`
   h3 {
     background: #FBE8D3;
     box-shadow: 2px 2px 3px 1px silver;
-    //border-bottom: 1px solid silver;
-    //color: white;
   }
 `;
 
@@ -199,7 +197,7 @@ const WorkExperience = () => {
                             </ExtraInfo>
                         </Cell>
                         <Cell>
-                            <CompanyName>Spalah It-School</CompanyName>
+                            <CompanyName>Spalah IT-School</CompanyName>
                             <TimePeriod>April 2016 - September 2017</TimePeriod>
                         </Cell>
                     </Heading>
@@ -210,7 +208,7 @@ const WorkExperience = () => {
                                 knowledge of JavaScript, React, Node.js, AngularJS
                             </li>
                             <li>
-                                was working on reviewing home tasks
+                                worked on reviewing home tasks
                             </li>
                         </ul>
                     </div>
