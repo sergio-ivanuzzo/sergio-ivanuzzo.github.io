@@ -35,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     
     & > li {
+      font-size: 14px;
       padding: 1px;
       &::before {
         content: "\\270E";
