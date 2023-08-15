@@ -55,7 +55,7 @@ const WorkExperience = () => {
                         </Cell>
                         <Cell>
                             <CompanyName>Amity</CompanyName>
-                            <TimePeriod>September 2020 - Present</TimePeriod>
+                            <TimePeriod>September 2020 - March 2023</TimePeriod>
                         </Cell>
                     </Heading>
                     <div className="body">
