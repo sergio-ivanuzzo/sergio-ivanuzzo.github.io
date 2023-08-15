@@ -140,7 +140,7 @@ const Page = () => {
                                 <Name>Sergey</Name>
                                 <Surname>Ivanenko</Surname>
                             </FullName>
-                            <Position>Senior React Engineer</Position>
+                            <Position>Rust/React Engineer</Position>
                         </LeftColumn>
                         <Contacts />
                     </Title>
@@ -148,7 +148,7 @@ const Page = () => {
                 <Row>
                     <About>
                         I have strong experience implementing both backend and frontend from scratch.
-                        I like automation, machine learning, implementing bots and implementing game servers.
+                        I like automation, machine learning, implementing bots and game servers.
                         Also I like to implement clear, user-friendly and intuitively understandable UI.
                     </About>
                 </Row>
