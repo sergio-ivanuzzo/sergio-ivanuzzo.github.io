@@ -106,9 +106,9 @@ const Contacts = () => {
                         <Email />
                     </Item>
                 </Link>
-                <Link target="_blank" href="https://wa.me/66829784530">
+                <Link target="_blank" href="https://wa.me/4915227817595">
                     <Item>
-                        <span>+66 82 978 4530</span>
+                        <span>+49 1522 781 75 95</span>
                         <WhatsApp />
                     </Item>
                 </Link>
