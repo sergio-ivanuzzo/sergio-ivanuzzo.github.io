@@ -7,9 +7,11 @@ import {theme} from "../theme";
 
 const App = ({ Component, pageProps }) => {
     const [loaded, setLoaded] = useState(false);
+
     useEffect(() => {
         setLoaded(true);
     }, []);
+
     return (
         <ThemeProvider theme={theme}>
             {loaded && (

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  margin-bottom: 40px;
+  
   h3 {
     width: calc(100% - 10px);
     text-transform: uppercase;

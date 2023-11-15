@@ -8,7 +8,7 @@ const Content = styled.div`
   font-style: italic;
   
   & > *:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 `;
 

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import WorkExperience from "./WorkExperience";
+import { FullStackWorkExperience, ReactWorkExperience, RustWorkExperience } from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
 import Contacts from "./Contacts";
@@ -9,6 +9,7 @@ import Contacts from "./Contacts";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
 const Content = styled.div`
@@ -129,7 +130,45 @@ const Position = styled.div`
   font-size: 25px;
 `;
 
+const Button = styled.button`
+  background: #FBE8D3;
+  border: 1px solid red;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  
+  &:hover {
+    cursor: pointer;
+    background: white;
+  }
+
+  &.selected {
+    background: white !important;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  margin: 5px 0 25px 0;
+  
+  > button:not(:first-child) {
+    margin-left: 20px;
+  }
+`;
+
+const POSITION = Object.freeze({
+    REACT: "React Engineer",
+    RUST: "Rust Engineer",
+    DEFAULT: "Full Stack Engineer",
+});
+
 const Page = () => {
+
+    const [position, setPosition] = useState(POSITION.DEFAULT);
+
     return (
         <Container>
             <Content>
@@ -140,21 +179,36 @@ const Page = () => {
                                 <Name>Sergey</Name>
                                 <Surname>Ivanenko</Surname>
                             </FullName>
-                            <Position>Rust/React Engineer</Position>
+                            <Position>{position}</Position>
                         </LeftColumn>
                         <Contacts />
                     </Title>
                 </Row>
                 <Row>
                     <About>
-                        I have strong experience implementing both backend and frontend from scratch.
-                        I like automation, machine learning, implementing bots and game servers.
-                        Also I like to implement clear, user-friendly and intuitively understandable UI.
+                        In general I have around 10 years of experience implementing both backend and frontend solutions.
+                        I specialize in creating clear, user-friendly, and intuitively understandable UI.
+                        In my free time, I engage in projects related to automation, machine learning, and the development of bots and game servers.
                     </About>
                 </Row>
                 <Row>
+                    <ButtonContainer className="not-print">
+                        <Button className={position === POSITION.DEFAULT && "selected"} onClick={() => setPosition(POSITION.DEFAULT)}>
+                            FULL STACK ENGINEER
+                        </Button>
+                        <Button className={position === POSITION.REACT && "selected"} onClick={() => setPosition(POSITION.REACT)}>
+                            REACT ENGINEER
+                        </Button>
+                        <Button className={position === POSITION.RUST && "selected"} onClick={() => setPosition(POSITION.RUST)}>
+                            RUST ENGINEER
+                        </Button>
+                    </ButtonContainer>
+                </Row>
+                <Row>
                     <LeftColumn>
-                        <WorkExperience />
+                        { position === POSITION.DEFAULT &&  <FullStackWorkExperience /> }
+                        { position === POSITION.REACT &&  <ReactWorkExperience /> }
+                        { position === POSITION.RUST &&  <RustWorkExperience /> }
                     </LeftColumn>
                     <RightColumn>
                         <Skills />
