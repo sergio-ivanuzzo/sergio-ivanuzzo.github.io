@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "next:build": "next build",
+    "next:build": "next build --verbose",
     "next:start": "next start",
     "next:dev": "next dev",
     "next:export": "next export"
