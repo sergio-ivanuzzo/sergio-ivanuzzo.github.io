@@ -22,7 +22,7 @@ const Skills = () => {
             <h3>Skills</h3>
             <Content>
                 <div>
-                    <SkillType>Frontend</SkillType>: React.js, Redux, Next.js, Storybook, Vue.js, JavaScript, TypeScript, d3.js
+                    <SkillType>Frontend</SkillType>: React.js, Redux, React Router, Next.js, Storybook, Vue.js, JavaScript, TypeScript, d3.js, SASS, AJAX, jest
                 </div>
                 <div>
                     <SkillType>Backend</SkillType>: Rust, Python, SQL, Node.js
