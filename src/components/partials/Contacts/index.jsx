@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Section} from "../../core/Layout";
 import Email from "../../icons/Email";
 import GitHub from "../../icons/GitHub";
+import LinkIcon from "../../icons/Link";
 import LinkedIn from "../../icons/LinkedIn";
 import WhatsApp from "../../icons/WhatsApp";
 
@@ -104,6 +105,12 @@ const Contacts = () => {
                     <Item>
                         <span>sergio.ivanuzzo@gmail.com</span>
                         <Email />
+                    </Item>
+                </Link>
+                <Link target="_blank" href="https://sergio-ivanuzzo.github.io/">
+                    <Item>
+                        <span>sergio-ivanuzzo.github.io</span>
+                        <LinkIcon />
                     </Item>
                 </Link>
                 <Link target="_blank" href="https://wa.me/4915227817595">

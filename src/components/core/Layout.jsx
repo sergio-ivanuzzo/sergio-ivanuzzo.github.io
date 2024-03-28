@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   
   h3 {
     width: calc(100% - 10px);

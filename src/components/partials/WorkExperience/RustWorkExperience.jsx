@@ -23,10 +23,7 @@ const Position = styled.div`
 
 const JobType = styled.span`
   font-weight: bold;
-  
-  &:after {
-    content: "\\25B8";
-  }
+  margin-right: 10px;
 `;
 
 const Location = styled.span``;

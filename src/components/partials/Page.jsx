@@ -5,6 +5,7 @@ import { FullStackWorkExperience, ReactWorkExperience, RustWorkExperience } from
 import Education from "./Education";
 import Skills from "./Skills";
 import Contacts from "./Contacts";
+import Languages from "./Languages";
 
 export const Container = styled.div`
   display: flex;
@@ -213,6 +214,7 @@ const Page = () => {
                     <RightColumn>
                         <Skills />
                         <Education />
+                        <Languages />
                     </RightColumn>
                 </Row>
             </Content>

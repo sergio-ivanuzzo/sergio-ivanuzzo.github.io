@@ -22,10 +22,10 @@ const Skills = () => {
             <h3>Skills</h3>
             <Content>
                 <div>
-                    <SkillType>Frontend</SkillType>: React.js, Redux, React Router, Next.js, Storybook, Vue.js, JavaScript, TypeScript, d3.js, SASS, AJAX, jest
+                    <SkillType>Frontend</SkillType>: React.js, Redux, Redux Saga, React Router, Next.js, Storybook, Vue.js, Vuex, JavaScript, TypeScript, d3.js, SASS, AJAX, jest, HTML, CSS, SCSS, GraphQL, REST API
                 </div>
                 <div>
-                    <SkillType>Backend</SkillType>: Rust, Python, SQL, Node.js
+                    <SkillType>Backend</SkillType>: Rust, Tokio, serde, macros, ffi, Python, SQLAlchemy, SQL, MySQL, Node.js
                 </div>
                 <div>
                     <SkillType>DevOps</SkillType>: VPS, VPN, iptables, SSL, Squid, Git Actions, Docker
