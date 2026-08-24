@@ -1,0 +1,15 @@
+import React from "react";
+
+const Icon = ({ width = "100%", height = "100%" }) => {
+    return (
+        <svg width={width} height={height} viewBox="0 0 32 32" version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M28.608 11.246l-12.608-8.632-12.608 8.632 12.608 8.631 12.608-8.631zM16 21.803l-11.129-7.338-1.479
+                1.535 12.608 8.631 12.608-8.631-1.499-1.568-11.109 7.371zM16 26.559l-11.129-7.338-1.479 1.535 12.608
+                8.631 12.608-8.631-1.499-1.568-11.109 7.371z"></path>
+        </svg>
+    );
+};
+
+export default Icon;
